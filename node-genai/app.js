@@ -10,18 +10,14 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Default configuration
-const DEFAULT_LLM_BASE_URL = "http://host.docker.internal:12434/engines/llama.cpp/v1";
-const DEFAULT_MODEL_NAME = "ignaciolopezluna020/llama3.2:1b";
-
 // Helper functions
 function getLLMEndpoint() {
-    const baseUrl = process.env.LLM_BASE_URL || DEFAULT_LLM_BASE_URL;
+    const baseUrl = process.env.LLM_BASE_URL;
     return `${baseUrl}/chat/completions`;
 }
 
 function getModelName() {
-    return process.env.LLM_MODEL_NAME || DEFAULT_MODEL_NAME;
+    return process.env.LLM_MODEL_NAME;
 }
 
 // Middleware

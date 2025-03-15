@@ -12,19 +12,9 @@ import (
 	"time"
 )
 
-// LLM API configuration
-const (
-	// Default values that can be overridden by environment variables
-	DefaultLLMBaseURL = "http://host.docker.internal:12434/engines/llama.cpp/v1"
-	DefaultModelName  = "ignaciolopezluna020/llama3.2:1b"
-)
-
 // getLLMEndpoint returns the complete LLM API endpoint URL
 func getLLMEndpoint() string {
 	baseURL := os.Getenv("LLM_BASE_URL")
-	if baseURL == "" {
-		baseURL = DefaultLLMBaseURL
-	}
 	return baseURL + "/chat/completions"
 }
 
@@ -55,9 +45,6 @@ type ChatResponse struct {
 // getModelName returns the model name to use for API requests
 func getModelName() string {
 	modelName := os.Getenv("LLM_MODEL_NAME")
-	if modelName == "" {
-		modelName = DefaultModelName
-	}
 	return modelName
 }
 

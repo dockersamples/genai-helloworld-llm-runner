@@ -5,18 +5,14 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
-# Default configuration
-DEFAULT_LLM_BASE_URL = "http://host.docker.internal:12434/engines/llama.cpp/v1"
-DEFAULT_MODEL_NAME = "ignaciolopezluna020/llama3.2:1b"
-
 def get_llm_endpoint():
     """Returns the complete LLM API endpoint URL"""
-    base_url = os.getenv("LLM_BASE_URL", DEFAULT_LLM_BASE_URL)
+    base_url = os.getenv("LLM_BASE_URL", "")
     return f"{base_url}/chat/completions"
 
 def get_model_name():
     """Returns the model name to use for API requests"""
-    return os.getenv("LLM_MODEL_NAME", DEFAULT_MODEL_NAME)
+    return os.getenv("LLM_MODEL_NAME", "")
 
 @app.route('/')
 def index():
