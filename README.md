@@ -23,8 +23,11 @@ A simple chatbot web application built with Go and Python that connects to a loc
    ```
 
 3. Open your browser and visit the following links:
+
    http://localhost:8080 for the GenAI Application in Go
+
    http://localhost:9090 for the GenAI Application in Python
+
    http://localhost:7070 for the GenAI Application in Node
 
 ## Requirements
