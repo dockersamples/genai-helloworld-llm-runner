@@ -1,3 +1,7 @@
+# hello-genai
+
+A simple chatbot web application built with Go and Python that connects to a local LLM service (llama.cpp) to provide AI-powered responses.
+
 ## Environment Variables
 
 The application uses the following environment variables defined in the `.env` file:
@@ -6,10 +10,6 @@ The application uses the following environment variables defined in the `.env` f
 - `LLM_MODEL_NAME`: The model name to use
 
 To change these settings, simply edit the `.env` file in the root directory of the project.
-
-## hello-genai
-
-A simple chatbot web application built with Go and Python that connects to a local LLM service (llama.cpp) to provide AI-powered responses.
 
 ## Quick Start
 
