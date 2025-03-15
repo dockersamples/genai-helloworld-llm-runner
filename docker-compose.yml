@@ -19,9 +19,9 @@ services:
       context: ./py-genai
       dockerfile: Dockerfile
     ports:
-      - "9090:9090"
+      - "8081:8081"
     environment:
-      - PORT=9090
+      - PORT=8081
     env_file:
       - .env
     restart: unless-stopped
@@ -33,9 +33,9 @@ services:
       context: ./node-genai
       dockerfile: Dockerfile
     ports:
-      - "7070:7070"
+      - "8082:8082"
     environment:
-      - PORT=7070
+      - PORT=8082
     env_file:
       - .env
     restart: unless-stopped

@@ -28,9 +28,9 @@ To change these settings, simply edit the `.env` file in the root directory of t
 
    http://localhost:8080 for the GenAI Application in Go
 
-   http://localhost:9090 for the GenAI Application in Python
+   http://localhost:8081 for the GenAI Application in Python
 
-   http://localhost:7070 for the GenAI Application in Node
+   http://localhost:8082 for the GenAI Application in Node
 
 ## Requirements
 
