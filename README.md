@@ -1,6 +1,6 @@
 # hello-genai
 
-A simple chatbot web application built with Go and Python that connects to a local LLM service (llama.cpp) to provide AI-powered responses.
+A simple chatbot web application built in Go, Python and Node.js that connects to a local LLM service (llama.cpp) to provide AI-powered responses.
 
 ## Environment Variables
 
