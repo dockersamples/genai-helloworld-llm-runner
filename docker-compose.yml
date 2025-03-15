@@ -27,3 +27,17 @@ services:
     restart: unless-stopped
     extra_hosts:
       - "host.docker.internal:host-gateway"
+
+  node-genai:
+    build:
+      context: ./node-genai
+      dockerfile: Dockerfile
+    ports:
+      - "7070:7070"
+    environment:
+      - PORT=7070
+    env_file:
+      - .env
+    restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
